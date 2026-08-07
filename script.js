@@ -11,13 +11,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // On mobile, tapping "Services" / "Service Areas" expands the submenu
-  // instead of navigating (desktop still uses CSS :hover).
+  // Tapping "Services" / "Service Areas" expands the submenu in place,
+  // at any screen size, since the whole nav lives behind the hamburger now.
   document.querySelectorAll('.nav-dropdown > span').forEach(function (span) {
     span.addEventListener('click', function () {
-      if (window.innerWidth <= 768) {
-        span.parentElement.classList.toggle('open');
-      }
+      span.parentElement.classList.toggle('open');
     });
   });
 });
