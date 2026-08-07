@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pipe Fence Installation - Southwest Missouri - Foundation Welding</title>
   <meta name="description" content="Heavy-duty pipe fencing built to handle livestock, weather, and years of wear across pastures and property lines. Call Foundation Welding for a free estimate." />
+  <meta property="og:title" content="Pipe Fence Installation - Southwest Missouri - Foundation Welding" />
+  <meta property="og:description" content="Heavy-duty pipe fencing built to handle livestock, weather, and years of wear across pastures and property lines. Call Foundation Welding for a free estimate." />
+  <meta property="og:image" content="../images/share-poster.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pipe Fence Installation - Southwest Missouri - Foundation Welding" />
+  <meta name="twitter:description" content="Heavy-duty pipe fencing built to handle livestock, weather, and years of wear across pastures and property lines. Call Foundation Welding for a free estimate." />
+  <meta name="twitter:image" content="../images/share-poster.jpg" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
@@ -123,13 +131,14 @@
       <p class="section-label">Get In Touch</p>
       <p>Tell us about your project and we'll get back to you.</p>
 
-      <form class="contact-form" onsubmit="return false;">
+      <form class="contact-form" action="https://formspree.io/brandonr.1022223@gmail.com" method="POST">
         <div class="form-row">
-          <input type="text" placeholder="Your Name" required />
-          <input type="tel" placeholder="Phone Number" required />
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="tel" name="phone" placeholder="Phone Number" required />
         </div>
-        <input type="text" placeholder="Project Location" />
-        <textarea placeholder="Tell us about your fencing project..." rows="4"></textarea>
+        <input type="text" name="location" placeholder="Project Location" />
+        <textarea name="message" placeholder="Tell us about your fencing project..." rows="4"></textarea>
+        <input type="hidden" name="_subject" value="New quote request - Foundation Welding" />
         <button type="submit" class="btn">Send Request</button>
       </form>
 
