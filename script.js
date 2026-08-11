@@ -1,3 +1,14 @@
+// Hero video source (avoids unreliable <source media> support on iOS Safari)
+document.addEventListener('DOMContentLoaded', function () {
+  var heroVideo = document.querySelector('.hero-video');
+  if (heroVideo) {
+    var isMobile = window.matchMedia('(max-width: 768px)').matches;
+    heroVideo.src = isMobile ? 'video/hero-mobile.mp4' : 'video/hero-desktop.mp4';
+    heroVideo.load();
+    heroVideo.play().catch(function () {});
+  }
+});
+
 // Mobile nav toggle
 document.addEventListener('DOMContentLoaded', function () {
   var toggle = document.getElementById('menuToggle');
