@@ -143,11 +143,33 @@ h1, h2, h3 {
 
 /* ===== HERO ===== */
 .hero {
-  background: linear-gradient(rgba(20,20,20,0.65), rgba(20,20,20,0.65)),
-              url('images/hero-gate.jpg') center/cover;
+  position: relative;
+  overflow: hidden;
   color: var(--white);
   padding: 120px 0;
   text-align: center;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(20,20,20,0.65);
+  z-index: 1;
+}
+
+.hero .hero-inner {
+  position: relative;
+  z-index: 2;
 }
 
 .hero h1 {
