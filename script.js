@@ -20,6 +20,16 @@ document.addEventListener('DOMContentLoaded', function () {
       toggle.classList.toggle('active', isOpen);
       toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
+
+    // Close the mobile menu once a link is actually tapped, so it doesn't
+    // stay open and cover the section you just navigated to.
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('nav-open');
+        toggle.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
   }
 
   // Tapping "Services" / "Service Areas" expands the submenu in place,
